@@ -172,6 +172,11 @@
 
 @media only screen and (max-width: 320px){
 
+    nav .logo{
+        margin-right: calc(50% - 150px);
+        margin-left: 0px;
+     
+    }
     .promo{
         height:400px !important;
         background-position: 50% 15% !important;

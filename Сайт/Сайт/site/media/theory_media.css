@@ -1,19 +1,19 @@
 @media only screen and (max-width: 1024px) {
-    nav .nav_points {
+    nav .nav_points{
         margin-top: 40px;
     }
 
-    .logo a {
+    .logo a{
         margin-left: 50px;
         margin-right: 0;
     }
 
-    .logo {
-        margin-right: calc(50% - 387px);
+    .logo{
+    margin-right: calc(50% - 350px);
     }
 
-    .nav_points a {
-        font-size: 14px;
+    .nav_points a{
+    font-size: 14px;
     }
 
     footer .footer_p {
@@ -21,20 +21,44 @@
     }
 }
 
+@media only screen and (max-width: 768px) {
+    nav .nav_points{
+        margin-top: 80px;
+        padding-top: 20px;
+    }
+
+    
+    nav .logo{
+        margin-right: calc(50% - 350px);
+        margin-left: 50px;
+    }
+
+    nav .logo a{
+        margin: 0;
+    }
+    nav .nav_points {
+        margin-top: 15px;
+    }
+
+
+}
 
 @media only screen and (max-width: 425px) {
+    
     nav .nav_points {
         margin-top: 40px;
+        padding-top: 0;
     }
 
     nav .logo a {
+        margin-top: 0px;
         margin-left: 5px;
         margin-right: 0;
-        font-size: 18px;
+        font-size: 22px;
     }
 
     nav .logo {
-        margin-right: calc(50% - 190px);
+        margin-right: calc(50% - 195px);
         margin-left: 0px;
     }
 
@@ -47,8 +71,8 @@
 
     .theory figure {
         padding: 0px;
-        width: 300px;
-        height: 300px;
+        width: 200px;
+        height: 200px;
     }
 
     .theory figure figcaption {
@@ -56,12 +80,29 @@
     }
 
     .theory figure .lloud_img:hover {
-        padding: 140px;
+        padding: 100px;
     }
 
     .theory figure>.lloud_img {
-        padding: 120px ;
+        padding: 90px ;
     }
+
+    
+    .theory figure .lespol_img:hover {
+        padding: 100px;
+    }
+
+    .theory figure>.lespol_img {
+        padding: 90px ;
+    }
+    
+    .dialog {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+   
 
 }
 
@@ -71,6 +112,7 @@
     }
 
     nav .logo a {
+        margin-top: 0px;
         margin-left: 5px;
         margin-right: 0;
         font-size: 14px;
@@ -104,6 +146,12 @@
 
     .theory figure>.lloud_img {
         padding: 90px ;
+    }
+
+    .dialog {
+        width: 95%;
+        margin-left: auto;
+        margin-right: auto;
     }
 
 }

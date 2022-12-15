@@ -206,6 +206,7 @@ h3{
 
 .guitar_diagram a{
     text-decoration: none;
+    color: gold;
 }
 
 footer {
@@ -216,7 +217,7 @@ footer {
     background-position: 40% 50%;
     vertical-align: baseline;
     background-position: 50% 50%;
-    background-color: rgb(255, 255, 255);
+    background-color: white;
     display: flex;
     justify-content: center;
     align-self: center;
@@ -226,7 +227,7 @@ footer {
 
 
 footer p {
-    color: aliceblue;
+    color: white;
     font-family: 'Rubik', sans-serif;
     font-size: 18px;
     margin-top: calc((150px - 20px)/2);

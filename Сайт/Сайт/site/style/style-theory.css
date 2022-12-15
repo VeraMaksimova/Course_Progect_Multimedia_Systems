@@ -249,24 +249,26 @@ ul li {
   background-color: #0C0C0C;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  background-size: 10px;
+  background-size: 28px;
   border: 2px solid #0C0C0C;
   color: #fff;
   font-size: 2rem;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
+background-image: url(../img/theory/micro.png);
+  padding: 0 40px;
 }
 
 .dialog__button-hover {
-  padding: 0 40px;
-  background-color: #0C0C0C;
+
+  background-color: gold;
   color: #979797;
   font-size: 2.5rem;
 }
 
 .dialog__button-listen {
   padding: 0 40px !important;
-  background-color: #ffffff !important;
+  background-color: darkgoldenrod !important;
   color: #ff2d2d !important;
   font-size: 2.5rem !important;
 }
