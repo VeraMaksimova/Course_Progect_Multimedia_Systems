@@ -17,6 +17,17 @@
     <link href="https://fonts.googleapis.com/css2?family=Nabla&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style/style-theory.css">
     <link rel="stylesheet" href="media/theory_media.css">
+    <script language="JavaScript">
+        function OpenImg(){
+            let img = document.getElementById('frying_pans');
+            img.style.display = 'block';
+        }
+
+        function CloseImg(){
+            let img = document.getElementById('frying_pans');
+            img.style.display = 'none';
+        }
+    </script>
 </head>
 
 <body>
@@ -125,8 +136,11 @@
             инженер-изобретатель, работавший в компании Gibson[2]. Первые электрогитары для массового рынка
             произвела в 1931 году Electro String Company, образованная Полом Бартом, Жоржем Бошамом и Адольфом
             Рикенбакером: будучи сделанными из алюминия, эти инструменты получили от музыкантов любовное прозвище
-            «frying pans» («сковородки»).
+            <button onmousedown="OpenImg()" class="button_frying">«frying pans» («сковородки»).</button>
         </p>
+        <div  onmousedown="CloseImg()" id="frying_pans" class="frying_pans">
+
+        </div>
         <figure>
             <div class="lloud_img"></div>
             <figcaption>Ллойд Лоэр</figcaption>
