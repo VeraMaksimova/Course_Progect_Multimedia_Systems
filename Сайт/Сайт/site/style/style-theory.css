@@ -1,7 +1,7 @@
 * {
   margin: 0;
   padding: 0;
-  background-color: #ffffff;
+  transition: all ease-in-out 0.2s;
 
 }
 
@@ -15,85 +15,127 @@ span::selection {
   background-color: rgba(255, 174, 0, 0.897);
 }
 
+/*#region header*/
+
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+  background-color: transparent;
+}
 
 header {
-  display: flex;
-  background-color: transparent;
-}
-
-nav {
-  width: 100%;
-  height: 150px;
   background-image: url(../img/index/bcg.svg);
-  background-repeat: no-repeat;
   background-position: 50% 50%;
-  vertical-align: baseline;
-  position: fixed;
-  background-color: rgba(255, 255, 255, 0);
+  background-size: 100% 100%;
+  margin-top: -28px;
+  background-repeat: no-repeat;
 }
 
-
-.nav_points {
-  display: inline-block;
+.header {
+  height: 150px;
   background-color: transparent;
-  color: white;
-  margin-top: 35px;
-
+  position: fixed;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 
-.nav_points a {
+.header .header_content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  padding-bottom: 30px;
+}
+
+
+.header .header_content ul a,
+a:not(:first-child) {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  font-family: 'Rubik', sans-serif;
+  font-size: 16px;
+  padding: 25px;
+  position: relative;
+  font-weight: 500;
+  transition: all linear 0.2s;
+
+}
+
+.header .header_content ul a:hover {
+  color: gold;
+}
+
+.header_content .logo {
+  font-size: 26px;
+  font-family: 'Nabla';
+  text-decoration: none;
+}
+
+.header .header_content .nav {
+  display: flex;
+  list-style: none;
+
+}
+
+.header .header_content .nav li {
+  width: 100%;
+  text-align: center;
+}
+
+.header .header_content ul a:hover::after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+.header .header_content a:not(:first-child):hover::after {
+  content: ' ';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+
+
+
+.header .header_content button {
+  display: none;
+  color: white;
   background-color: transparent;
   font-family: 'Rubik', sans-serif;
-  padding: 10px;
-  margin-left: 30px;
-  margin-right: 30px;
-  text-decoration: none;
-  color: aliceblue;
+  font-size: 16px;
+  padding: 15px;
+  font-weight: 500;
+  border: none;
 }
 
-.nav_points a:hover {
-  animation: a_animate 0.5s ease-in none;
 
+
+#nav_toggle {
+  display: none;
 }
 
-@keyframes a_animate {
-  50% {
-    color: rgb(255, 196, 0);
-  }
+/*#endregion*/
 
-  100% {
-    color: aliceblue;
-  }
-}
-
-.logo {
-  background-color: transparent;
-  padding-top: 30px;
-}
-
-.logo a {
-  padding: 10px;
-  background-color: transparent;
-  margin-left: 100px;
-  font-family: 'Nabla', cursive;
-  font-size: 26px;
-  text-align: left;
-  margin-right: calc(50% - 460px);
-  text-decoration: none;
-
-}
-
-/*Theory*/
-
+/*#region Theory*/
 
 .theory {
-  margin-top: 200px;
   width: 80%;
   margin-left: auto;
   margin-right: auto;
   color: #0C0C0C;
   margin-bottom: calc(240px - 150px);
+  transition: all linear 2s;
 }
 
 ul {
@@ -109,6 +151,7 @@ ul li {
 }
 
 .theory h1 {
+  padding-top: 200px;
   font-size: 68px;
   font-family: 'Rubik', sans-serif;
   font-style: italic;
@@ -167,10 +210,15 @@ ul li {
   font-family: 'Rubik', sans-serif;
   font-weight: normal;
   font-size: 18px;
-
 }
 
-/*Knolege Base*/
+
+
+
+
+/*#endregion*/
+
+/*#region Knolege Base*/
 
 .dialog {
   margin: 20px 0;
@@ -255,7 +303,7 @@ ul li {
   font-size: 2rem;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
-background-image: url(../img/theory/micro.png);
+  background-image: url(../img/theory/micro.png);
   padding: 0 40px;
 }
 
@@ -308,6 +356,10 @@ background-image: url(../img/theory/micro.png);
   width: 50%;
 }
 
+
+/*#endregion*/
+
+/*#region FOOTER*/
 footer {
   width: 100%;
   height: 150px;
@@ -329,6 +381,161 @@ footer p {
   color: rgb(255, 255, 255);
   font-family: 'Rubik', sans-serif;
   font-size: 18px;
+  font-weight: 500;
   margin-top: calc((150px - 20px)/2);
   background-color: #0C0C0C;
 }
+
+/*#endregion*/
+
+
+/*#region MEDIA*/
+@media only screen and (max-width: 1440px) {
+  header {
+    background-position: 50% 70%;
+    background-size: cover;
+  }
+
+}
+
+
+@media only screen and (max-width: 1024px) {
+  .header .header_content .nav {
+    display: none;
+  }
+
+
+  .header .header_content button {
+    display: block;
+  }
+
+
+  #nav_toggle:checked~ul {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: #0c0c0c98;
+    height: 100%;
+    width: 400px;
+  }
+
+
+  .header .header_content .nav li {
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+  }
+
+  .header .header_content ul a,
+  a:not(:first-child) {
+    padding: 10px;
+  }
+
+
+  .header .header_content ul a:hover::after {
+    border: none;
+  }
+
+  .header .header_content {
+    justify-content: space-around;
+  }
+
+  .promo h1 span {
+    font-size: 70px;
+  }
+
+  footer .footer_p {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  #nav_toggle:checked~ul {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 425px) {
+
+  #nav_toggle:checked~ul {
+    width: 180px;
+  }
+
+  header .header_content a img {
+    width: 100px;
+  }
+
+
+  .header .header_content a {
+    font-size: 24px;
+  }
+
+
+  .theory figure {
+    padding: 0px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .theory figure figcaption {
+    font-size: 12px;
+  }
+
+  .theory figure .lloud_img:hover {
+    padding: 100px;
+  }
+
+  .theory figure>.lloud_img {
+    padding: 90px;
+  }
+
+
+  .theory figure .lespol_img:hover {
+    padding: 100px;
+  }
+
+  .theory figure>.lespol_img {
+    padding: 90px;
+  }
+
+  .dialog {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+
+
+}
+
+@media only screen and (max-width: 320px) {
+ 
+
+  .theory figure {
+    padding: 0px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .theory figure figcaption {
+    font-size: 12px;
+  }
+
+  .theory figure .lloud_img:hover {
+    padding: 100px;
+  }
+
+  .theory figure>.lloud_img {
+    padding: 90px;
+  }
+
+  .dialog {
+    width: 95%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+}
+
+/*#endregion*/

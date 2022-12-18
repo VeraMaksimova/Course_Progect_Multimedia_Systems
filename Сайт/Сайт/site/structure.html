@@ -22,17 +22,21 @@
 
 <body>
     <section>
-        <header>
-            <nav>
-                <span class="logo">
-                    <a href="index.html" target="_blank">Guitar</a>
-                </span>
-                <span class="nav_points">
-                    <a href="structure.html" target="_blank">cтруктура</a>
-                    <a href="theory.html" target="_blank">теория</a>
-                    <a href="simulator.html" target="_blank">cимулятор</a>
-                </span>
-            </nav>
+        <header class="header">
+            <div class="container">
+                <div class="header_content">
+                    <a href="index.html" class="logo">Guitar</a>
+                    <button сlass="nav_toggle"><label for="nav_toggle">
+                            menu
+                    </label></button>
+                    <input type="checkbox" id="nav_toggle">
+                <ul class="nav">
+                    <li><a href="simulator.html">симулятор</a></li>
+                    <li><a href="theory.html">теория</a></li>
+                    <li><a href="structure.html">структура</a></li>
+                </ul>
+            </div>
+        </div>
         </header>
         <section class="slider">
             <button class="button_left" id="button_left" onmousedown="nextSlide_left()">&#60;</button>
