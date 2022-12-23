@@ -232,7 +232,7 @@ ul li {
   padding: 300px;
   top: calc(50% - 300px);
   left: calc(50% - 300px);
-  box-shadow: 0px 0px 1000px 0px rgba(0, 0, 0, 0.747);;
+  box-shadow: 0px 0px 1000px 0px rgba(0, 0, 0, 0.747);
   z-index: 5;
   display: none;
   transition: all ease-in-out 0.3s;
@@ -244,17 +244,20 @@ ul li {
 
 /*#region Knolege Base*/
 
-.dialog {
+.dialog{
+  position: fixed;
+  top: 20%;
+  right: 20%;
+  box-shadow: 0px 0px 1000px 0px rgba(0, 0, 0, 0.747);
   margin: 20px 0;
   width: 60%;
-  margin-left: auto;
-  margin-right: auto;
+  display: none;
 }
+
 
 
 .dialog__window {
   border-radius: 30px;
-  overflow: hidden;
 }
 
 
@@ -265,12 +268,15 @@ ul li {
   background-color: #0C0C0C;
   color: #fff;
   font-family: 'Rubik', sans-serif;
+  overflow: hidden;
+  
 }
 
 .dialog__body {
   height: 450px;
   display: -webkit-box;
   display: -ms-flexbox;
+  background-color: #fff;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
@@ -303,6 +309,7 @@ ul li {
   border-bottom: 2px solid #0C0C0C;
   border-left: 2px solid #0C0C0C;
   border-radius: 0px 0px 0px 0px;
+  box-shadow: 0px 0px 1000px 0px rgba(0, 0, 0, 0.747);
 }
 
 
@@ -380,6 +387,25 @@ ul li {
   width: 50%;
 }
 
+.base_knolege_button_open{
+  color: white;
+  font-family: 'Rubik', sans-serif;
+  font-size: 18px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #0C0C0C;
+  border-radius: 20px;
+  padding: 20px 50px;
+  transition: all ease-in-out 0.2s;
+}
+
+
+.base_knolege_button_open:hover{
+    color: #0C0C0C;
+    background-color: gold;
+}
+
 
 /*#endregion*/
 
@@ -409,6 +435,8 @@ footer p {
   margin-top: calc((150px - 20px)/2);
   background-color: #0C0C0C;
 }
+
+
 
 /*#endregion*/
 
@@ -478,6 +506,12 @@ footer p {
   #nav_toggle:checked~ul {
     width: 400px;
   }
+  
+  .dialog{
+
+    top: 30px;
+  }
+
 }
 
 @media only screen and (max-width: 425px) {
@@ -529,10 +563,23 @@ footer p {
     left: calc(50% - 100px);
   }
 
-  .dialog {
+  .dialog{
+
+    top: 30px;
+    left:10px;
+    box-shadow: 0px 0px 1000px 0px rgba(0, 0, 0, 0.747);
+    margin: 0px 0;
     width: 95%;
-    margin-left: auto;
-    margin-right: auto;
+    display: none;
+  }
+
+  .base_knolege_button_open{
+    font-size: 16px;
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    padding: 10px 30px;
+
   }
 
 
@@ -560,11 +607,7 @@ footer p {
     padding: 90px;
   }
 
-  .dialog {
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-  }
+ 
 
 }
 

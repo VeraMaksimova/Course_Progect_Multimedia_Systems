@@ -18,6 +18,31 @@
     <link href="https://fonts.googleapis.com/css2?family=Nabla&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="media/structure_media.css">
     <script defer src="script/sructure-script.js"></script>
+    <script language="JavaScript">
+        function OpenImg(){
+            let img = document.getElementById('frying_pans');
+            img.style.display = 'block';
+        }
+
+        function CloseImg(){
+            let img = document.getElementById('frying_pans');
+            img.style.display = 'none';
+        }
+        let i = 0;
+        function OpenBase(){
+            let base = document.getElementById('dialog');
+
+            i = i + 1;
+            if((i % 2) == 1){
+                base.style.display = 'block';
+            }else{
+                base.style.display = 'none';
+            }
+
+        }
+
+
+    </script>
 </head>
 
 <body>
@@ -65,9 +90,26 @@
         <section class="working_principle">
             <h3>Принцип работы</h3>
         </section>
+        <section  id="dialog" class="dialog">
+            <div class="dialog__window">
+                <h4 class="dialog__header">База знаний</h4>
+                <div class="dialog__body" id="dialog__messanger"></div>
+                <form class="dialog__submit" id="dialog__form" onsubmit="return false">
+                    <input class="dialog__input" id="dialog__input" type="text" name="question" autocomplete="off"
+                        placeholder="Введите ваш вопрос" />
+                    <button class="dialog__button" id="dialog__button" type="button">
+                        <i class="fas fa-microphone"></i>
+                    </button>
+                </form>
+            </div>
+        </section>
+        <section>
+            <h2 id="base_knolege_button_open" onmousedown="OpenBase()" class="base_knolege_button_open">База знаний</h2>
+        </section>
         <footer>
             <p class="footer_p">Максимова Вера</p>
         </footer>
+        <script src="script/theory-knolege.js"></script>
     </section>
 </body>
 

@@ -27,6 +27,20 @@
             let img = document.getElementById('frying_pans');
             img.style.display = 'none';
         }
+        let i = 0;
+        function OpenBase(){
+            let base = document.getElementById('dialog');
+
+            i = i + 1;
+            if((i % 2) == 1){
+                base.style.display = 'block';
+            }else{
+                base.style.display = 'none';
+            }
+
+        }
+
+
     </script>
 </head>
 
@@ -192,7 +206,7 @@
             устраивать аналогичные состязания с Шэмблином и Маколиффом.
         </p>
     </section>
-    <section class="dialog">
+    <section  id="dialog" class="dialog">
         <div class="dialog__window">
             <h4 class="dialog__header">База знаний</h4>
             <div class="dialog__body" id="dialog__messanger"></div>
@@ -204,6 +218,9 @@
                 </button>
             </form>
         </div>
+    </section>
+    <section>
+        <h2 id="base_knolege_button_open" onmousedown="OpenBase()" class="base_knolege_button_open">База знаний</h2>
     </section>
     <footer>
         <p class="footer_p">Максимова Вера</p>

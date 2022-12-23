@@ -520,6 +520,172 @@ img:hover {
 
 /*#endregion*/
 
+/*#region base-knolege*/
+.dialog{
+    position: fixed;
+    top: 20%;
+    right: 20%;
+    box-shadow: 0px 0px 1000px 0px rgba(0, 0, 0, 0.747);
+    margin: 20px 0;
+    width: 60%;
+    display: none;
+  }
+  
+  
+  
+  .dialog__window {
+    border-radius: 30px;
+  }
+  
+  
+  .dialog__header {
+    padding: 15px;
+    text-align: center;
+    font-weight: 600;
+    background-color: #0C0C0C;
+    color: #fff;
+    font-family: 'Rubik', sans-serif;
+    overflow: hidden;
+    
+  }
+  
+  .dialog__body {
+    height: 450px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    background-color: #fff;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    overflow: auto;
+    word-wrap: break-word;
+    scroll-behavior: smooth;
+  }
+  
+  .dialog__submit {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    border-radius: 30px;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+  
+  .dialog__input {
+    width: 100%;
+    padding: 15px 25px;
+    background-color: #0C0C0C;
+    font-family: 'Rubik', sans-serif;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    border-bottom: 2px solid #0C0C0C;
+    border-left: 2px solid #0C0C0C;
+    border-radius: 0px 0px 0px 0px;
+    box-shadow: 0px 0px 1000px 0px rgba(0, 0, 0, 0.747);
+  }
+  
+  
+  .dialog__input::-ms-input-placeholder,
+  .dialog__input::placeholder,
+  .dialog__input:-ms-input-placeholder,
+  .dialog__input::-webkit-input-placeholder {
+    color: rgb(255, 255, 255);
+    font-family: 'Rubik', sans-serif;
+  }
+  
+  
+  
+  .dialog__button {
+    padding: 0 30px;
+    background-color: #0C0C0C;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 28px;
+    border: 2px solid #0C0C0C;
+    color: #fff;
+    font-size: 2rem;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    background-image: url(../img/theory/micro.png);
+    padding: 0 40px;
+  }
+  
+  .dialog__button-hover {
+  
+    background-color: gold;
+    color: #979797;
+    font-size: 2.5rem;
+  }
+  
+  .dialog__button-listen {
+    padding: 0 40px !important;
+    background-color: darkgoldenrod !important;
+    color: #ff2d2d !important;
+    font-size: 2.5rem !important;
+  }
+  
+  .dialog__message {
+    margin: 5px;
+    font-family: 'Rubik', sans-serif;
+    padding: 10px;
+    border-radius: 40px;
+    max-width: 60%;
+    text-align: justify;
+    -webkit-box-shadow: 4px 4px 8px 0px rgb(202, 202, 202);
+    box-shadow: 4px 4px 8px 0px rgb(202, 202, 202);
+  }
+  
+  .dialog__message.question {
+    font-family: 'Rubik', sans-serif;
+    margin-left: auto;
+    border-top-right-radius: 0;
+    background-color: #0C0C0C;
+    color: #fff;
+  }
+  
+  .dialog__message.answer {
+    margin-right: auto;
+    border-top-left-radius: 0;
+    background-color: #ffffff;
+  }
+  
+  .dialog__image {
+    margin: 5px;
+    margin-right: auto;
+    border-radius: 20px;
+    -webkit-box-shadow: 4px 4px 8px 0px rgb(202, 202, 202);
+    box-shadow: 4px 4px 8px 0px rgb(202, 202, 202);
+    border-top-left-radius: 0;
+    width: 50%;
+  }
+  
+  .base_knolege_button_open{
+    color: white;
+    font-family: 'Rubik', sans-serif;
+    font-size: 18px;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #0C0C0C;
+    border-radius: 20px;
+    padding: 20px 50px;
+    transition: all ease-in-out 0.2s;
+  }
+  
+  
+  .base_knolege_button_open:hover{
+      color: #0C0C0C;
+      background-color: gold;
+  }
+  
+  
+  /*#endregion*/
+
 /*#region FOOTER*/
 footer {
     width: 100%;
@@ -656,6 +822,10 @@ footer p {
         height: 600px !important;
         background-color: aliceblue;
     }
+    .dialog{
+
+        top: 30px;
+    }
 
     footer {
         background-color: aliceblue;
@@ -726,6 +896,25 @@ footer p {
     .about_information p:last-child {
         margin-bottom: 100px;
     }
+
+    .dialog{
+
+        top: 30px;
+        left:10px;
+        box-shadow: 0px 0px 1000px 0px rgba(0, 0, 0, 0.747);
+        margin: 0px 0;
+        width: 95%;
+        display: none;
+      }
+    
+      .base_knolege_button_open{
+        font-size: 16px;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        padding: 10px 30px;
+    
+      }
 
 }
 
